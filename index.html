@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priyanka Paul | AIML Engineer Portfolio</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --text: #111827;
+      --card-bg: #fff;
+      --nav-bg: #1f2937;
+      --primary: #2563eb;
+      --hover: #38bdf8;
+      --muted: #d1d5db;
+      --skill-bg: #e0f2fe;
+      --footer: #1f2937;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --card-bg: #1e293b;
+      --nav-bg: #0f172a;
+      --primary: #60a5fa;
+      --hover: #93c5fd;
+      --muted: #94a3b8;
+      --skill-bg: #334155;
+      --footer: #0f172a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: all 0.4s ease;
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      color: var(--text);
+      padding: 40px 20px;
+      text-align: center;
+      animation: floatHeader 4s ease-in-out infinite;
+      position: relative;
+    }
+
+    @keyframes floatHeader {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--skill-bg);
+      border: none;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--hover);
+    }
+
+    section {
+      padding: 60px 50px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: transform 0.5s ease, background-color 0.3s;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    @keyframes floatCard {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .skills-grid span {
+      background-color: var(--skill-bg);
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .skills-grid span:hover {
+      background-color: var(--hover);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--footer);
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <button class="toggle-btn" onclick="toggleTheme()">🌙 Toggle</button>
+  <h1>Priyanka Paul</h1>
+  <p>Aspiring AIML Engineer | Frontend Enthusiast | Tech Explorer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="card">
+  <h2>About Me</h2>
+  <p>
+    I’m Priyanka Paul, a passionate AIML Engineer from Visakhapatnam, currently pursuing my B.Tech in 
+    CSE (AI & ML) at GITAM University. I’m deeply interested in building innovative solutions using Artificial Intelligence 
+    and Machine Learning. My academic journey and hands-on projects have equipped me with strong problem-solving and technical skills. 
+    I aspire to bring AI into real-world solutions that can improve lives.
+  </p>
+</section>
+
+<section id="skills" class="card">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <span>Python</span>
+    <span>Machine Learning</span>
+    <span>Artificial Intelligence</span>
+    <span>Data Preprocessing</span>
+    <span>EDA</span>
+    <span>Scikit-learn</span>
+    <span>XGBoost</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>MySQL</span>
+    <span>Pandas</span>
+    <span>Matplotlib</span>
+    <span>Deep Learning</span>
+    <span>GitHub</span>
+    <span>Colab & VS Code</span>
+  </div>
+</section>
+
+<section id="projects" class="card">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>🎮 Quiz Game:</strong> Developed using Python & MySQL, with data visualization using Pandas and Matplotlib.</li>
+    <li><strong>🩺 Disease Prediction System:</strong> Built with XGBoost, Random Forest, and Stacking for accurate predictions from symptom input.</li>
+    <li><strong>🎙 Aurivion Voice Assistant:</strong> created a Python-based intelligent voice assistant that responds to a wake word, uses speech recognition,and it runs silently in the background with a system tray icon. It includes features like voice-based command handling, system control (shutdown, restart), and the ability to open websites like YouTube.</li>
+  </ul>
+</section>
+
+<section id="certifications" class="card">
+  <h2>Certifications</h2>
+  <ul>
+    <li>🌟 Codebeat Internship – Top Performer (AI/ML Developer)</li>
+    <li>🧠 GenAI Certification – BCG-X</li>
+    <li>📊 Data Analytics Simulation – Forage (Deloitte)</li>
+    <li>🤖 AI for Everyone – DeepLearning.AI</li>
+    <li>🐍 Python for Data Structures – Coursera</li>
+  </ul>
+</section>
+
+<section id="contact" class="card contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:priyankapaul7245@gmail.com">priyankapaul7245@gmail.com</a></p>
+  <p>Phone: <a href="tel:9381701412">9381701412</a></p>
+  <p>Location: Visakhapatnam, Andhra Pradesh</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/priyanka-p-856188258/" target="_blank">Visit My Profile</a></p>
+</section>
+
+<footer>
+  <p>Made by Priyanka Paul | 2025</p>
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+    // You can store the theme preference like this:
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  }
+
+  // Load theme from storage if available
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  };
+</script>
+</body>
+</html>
